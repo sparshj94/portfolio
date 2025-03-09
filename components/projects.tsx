@@ -20,6 +20,7 @@ export default function Projects() {
       description:
         "A comprehensive expense tracking application with AI-powered receipt scanning and advanced analytics.",
       image: "/expense-project.jpg",
+      aspectRatio: "aspect-square",
       technologies: ["Spring Boot", "React Native", "MySQL", "AWS", "Apache Kafka", "JWT", "Docker"],
       achievements: [
         "50% increase in uptime and fault tolerance",
@@ -33,6 +34,7 @@ export default function Projects() {
       title: "E-Commerce Web Application",
       description: "A full-featured e-commerce platform with secure payment processing and optimized image delivery.",
       image: "/ecomm.jpg",
+      aspectRatio: "aspect-[16/9]",
       technologies: ["MongoDB", "Express", "React.js", "Node.js", "Cloudinary", "Razorpay"],
       achievements: [
         "50% boost in user engagement",
@@ -66,13 +68,13 @@ export default function Projects() {
             >
               <div className={`w-full lg:w-1/2 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <GlowingCard containerClassName="p-0 overflow-hidden">
-                  <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px]">
+                  <div className={`relative w-full ${project.aspectRatio} max-w-[500px] mx-auto`}>
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       fill
                       className="object-contain transition-transform duration-500 hover:scale-105"
-                      sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 600px"
+                      sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 500px"
                       priority={index === 0}
                     />
                   </div>

@@ -64,7 +64,7 @@ export default function Contact() {
       icon: <Linkedin className='h-5 w-5 text-primary' />,
       title: 'LinkedIn',
       value: 'Connect with me',
-      link: 'https://linkedin.com/in/sparsh-jain',
+      link: 'https://linkedin.com/in/sparshjain93',
     },
     {
       icon: <Github className='h-5 w-5 text-primary' />,
